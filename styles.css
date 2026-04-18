@@ -105,6 +105,8 @@ a:hover{ text-decoration:underline; }
   flex-direction:column;
   gap:2px;
   min-width: 0;
+  flex: 1 1 auto;
+  overflow-wrap: anywhere;
 }
 
 .nav{
@@ -524,6 +526,14 @@ a:hover{ text-decoration:underline; }
 
   .brand-name{
     font-size: 1rem;
+  }
+
+  .brand{
+    align-items: flex-start;
+  }
+
+  .brand-text .small{
+    line-height: 1.25;
   }
 
   .list li{
