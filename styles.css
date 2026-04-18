@@ -532,8 +532,8 @@ a:hover{ text-decoration:underline; }
     align-items: flex-start;
   }
 
-  .brand-text .small{
-    line-height: 1.25;
+  #roleHeader{
+    display: none;
   }
 
   .list li{
