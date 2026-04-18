@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ayoub-regd.github.io/sitemap.xml
