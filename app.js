@@ -1,15 +1,24 @@
 const DATA = {
   name: "Ayoub REGGAD",
   initials: "AR",
-  role: "Étudiant IPSSI — Systèmes, Réseaux & Cloud",
-  headline: "Je conçois et sécurise des environnements Linux/AWS (hardening, audit, déploiement).",
-  bio: "Recherche un stage dès mai 2026 (4 mois minimum), puis une alternance en octobre 2026. J'apporte des pratiques de durcissement, d'automatisation et de documentation.",
-  location: "Nice, France",
-  availability: "Stage mai 2026 (4 mois min) puis alternance oct. 2026",
+  role: "Étudiant IPSSI — Développement & Infrastructure",
+  headline: "Je développe des projets web et je construis des environnements d'infrastructure, cloud et sécurité.",
+  bio: "Je recherche un stage dès mai 2026, puis une alternance à partir d'octobre 2026. Je suis ouvert à des missions concrètes en développement, infrastructure, cloud ou sécurité, avec une préférence pour les sujets utiles, documentés et techniquement propres.",
+  location: "Nice, Alpes-Maritimes",
+  availability: "Stage dès mai 2026 (4 mois min), alternance dès octobre 2026",
   email: "a.reggad@ecole-ipssi.net",
-  cvUrl: "",
+  cvUrl: "assets/REGGAD-Ayoub-cv.pdf",
 
-  chips: ["Linux", "AWS", "Hardening", "Sécurité", "Réseaux", "Automation"],
+  qualities: ["Adaptabilité", "Rigueur", "Esprit d'équipe", "Curiosité", "Sens des responsabilités"],
+
+  chips: [
+    "Développement web",
+    "Infrastructure",
+    "Cloud AWS",
+    "Sécurité",
+    "Virtualisation",
+    "Automatisation"
+  ],
 
   links: [
     { label: "GitHub", url: "https://github.com/Ayoub-regd/" },
@@ -17,36 +26,55 @@ const DATA = {
   ],
 
   skills: [
-    "Linux (Debian/Ubuntu)",
-    "AWS (S3, IAM, EC2)",
-    "Hardening & audit",
-    "Nmap / Lynis",
-    "Réseaux TCP/IP",
-    "Virtualisation (Proxmox/VMware)",
-    "Git/GitHub",
-    "Scripting Bash"
+    "Développement web : HTML, CSS, JavaScript, Node.js, Express, PHP",
+    "Bases de données : MySQL, MongoDB, notions PostgreSQL",
+    "Cloud : AWS S3, IAM, EC2, CloudFront, Route 53",
+    "Systèmes : Linux Debian/Ubuntu, Windows Server",
+    "Virtualisation : VMware, Proxmox, Hyper-V",
+    "Automatisation : Bash, PowerShell, scripts de labo",
+    "Réseau / sécurité : Nmap, Wireshark, hardening, audit",
+    "Outils : Git, GitHub, Docker, documentation technique"
   ],
 
   experience: [
     {
       type: "Formation",
-      title: "IPSSI — Bachelor Administrateur Systèmes/Réseaux/Sécurité",
-      period: "2024–2027 (en cours)",
+      title: "IPSSI — Bachelor Administrateur Systèmes, Réseaux et Sécurité",
+      period: "Depuis octobre 2024",
       details: [
-        "Administration Linux",
-        "Réseaux TCP/IP",
-        "Sécurité & hardening",
-        "Cloud AWS Academy"
+        "Administration Linux et Windows Server",
+        "Réseaux, cloud AWS et virtualisation",
+        "Projets pratiques en sécurité, scripting et infrastructure"
       ]
     },
     {
-      type: "Projet encadré",
-      title: "Lab virtualisation (Proxmox/VMware)",
-      period: "2025",
+      type: "Stage",
+      title: "Webmaster & SEO — Evenement Animation Artistique",
+      period: "Mai 2025 à juillet 2025",
       details: [
-        "Clusters et snapshots",
-        "Segmentation réseau",
-        "Services auto-hébergés"
+        "Optimisation WordPress et structure des contenus",
+        "Crawls réguliers et reporting des correctifs",
+        "Travail à distance avec suivi opérationnel"
+      ]
+    },
+    {
+      type: "Projet web",
+      title: "Inclunum.fr — plateforme éducative fullstack",
+      period: "Projet étudiant",
+      details: [
+        "Node.js, Express, MongoDB, accessibilité",
+        "Authentification sécurisée et logique serveur",
+        "Déploiement cloud et documentation utilisateur"
+      ]
+    },
+    {
+      type: "Lab infrastructure",
+      title: "Infrastructure de test et sécurité",
+      period: "Projet IPSSI / labo personnel",
+      details: [
+        "Virtualisation VMware / Proxmox",
+        "Segmentation, snapshots, scripts d'administration",
+        "Durcissement Linux et pratiques de supervision"
       ]
     }
   ],
@@ -54,94 +82,195 @@ const DATA = {
   certifications: [
     {
       title: "AWS Academy Cloud Foundations",
-      status: "en cours",
-      details: "Labs S3 Website, IAM, EC2."
+      status: "En cours",
+      details: "Labs IAM, S3, EC2 et premiers déploiements cloud documentés."
     },
     {
-      title: "TryHackMe / labs cybersécurité",
-      status: "en cours",
-      details: "Pratique offensive/défensive et reporting."
+      title: "Labs cybersécurité / hardening",
+      status: "En cours",
+      details: "Audits Linux, réduction de surface d'attaque, pare-feu et documentation de remédiation."
+    },
+    {
+      title: "Veille et événements cybersécurité",
+      status: "Actif",
+      details: "Participation à des échanges techniques et consolidation des notes de cours, de labo et de projet."
+    }
+  ],
+
+  references: [
+    {
+      id: "web",
+      title: "Développement web",
+      definition: "Concevoir une interface, une logique serveur et des données cohérentes pour livrer un service utilisable et maintenable.",
+      usage: [
+        "Inclunum : Node.js, Express, MongoDB, accessibilité",
+        "Stage WordPress / SEO : structure, contenus, optimisation"
+      ],
+      links: [
+        { label: "Voir Inclunum", url: "projects/inclunum.html" }
+      ]
+    },
+    {
+      id: "infrastructure",
+      title: "Infrastructure",
+      definition: "Assembler des systèmes, des services et des règles d'exploitation pour qu'un environnement reste stable, testable et documenté.",
+      usage: [
+        "Lab VMware / Proxmox",
+        "Infrastructure de test avec segmentation, snapshots et services isolés"
+      ],
+      links: [
+        { label: "Voir le lab Proxmox", url: "projects/proxmox-lab.html" }
+      ]
+    },
+    {
+      id: "aws",
+      title: "AWS",
+      definition: "Plateforme cloud utilisée ici pour des labs de stockage, identité, calcul et déploiement statique.",
+      usage: [
+        "Labs S3, IAM et EC2",
+        "Archive d'un ancien déploiement statique du portfolio",
+        "Déploiement cloud mentionné sur Inclunum"
+      ],
+      links: [
+        { label: "Voir l'archive AWS", url: "projects/aws-s3-portfolio.html" }
+      ]
+    },
+    {
+      id: "security",
+      title: "Sécurité et hardening",
+      definition: "Réduire la surface d'attaque d'un système par configuration, contrôle des accès, pare-feu, mises à jour et audit.",
+      usage: [
+        "Projet Hardening Linux",
+        "Contrôles SSH, fail2ban, firewall, remédiations"
+      ],
+      links: [
+        { label: "Voir Hardening Linux", url: "projects/hardening-linux.html" }
+      ]
+    },
+    {
+      id: "virtualisation",
+      title: "Virtualisation",
+      definition: "Créer des environnements de test isolés pour déployer, casser, restaurer et documenter des services sans risquer la machine hôte.",
+      usage: [
+        "VMware, Proxmox, snapshots et VLAN",
+        "Rejeu rapide de scénarios de test"
+      ],
+      links: [
+        { label: "Voir le lab virtualisation", url: "projects/proxmox-lab.html" }
+      ]
+    },
+    {
+      id: "automation",
+      title: "Automatisation",
+      definition: "Standardiser des tâches répétitives avec des scripts pour gagner du temps et réduire les erreurs manuelles.",
+      usage: [
+        "Scripts Bash / PowerShell en labo",
+        "Déploiement historique sur AWS S3 et documentation technique"
+      ],
+      links: [
+        { label: "Voir l'archive AWS", url: "projects/aws-s3-portfolio.html" }
+      ]
     }
   ],
 
   projects: [
     {
       title: "Projet Cybersécurité — Hardening Linux",
-      summary: "Passerelle + serveur web durcis pour réduire la surface d'attaque.",
-      objective: "Sécuriser une passerelle et un serveur web exposés.",
+      summary: "Passerelle et serveur web durcis pour réduire la surface d'attaque et documenter les remédiations.",
+      objective: "Sécuriser des systèmes exposés avec une approche vérifiable.",
       actions: [
-        "Audit Lynis & LinPEAS",
+        "Audit Lynis et LinPEAS",
         "Durcissement SSH (clé, no root, fail2ban)",
-        "Firewall + désactivation des services inutiles",
-        "Patching et gestion des privilèges"
+        "Pare-feu, désactivation des services inutiles, mises à jour"
       ],
       results: [
-        "Rapport PDF + checklist de remédiation",
-        "Captures d'audit et notes techniques",
-        "Scripts d'audit réutilisables"
+        "Checklist de remédiation et notes techniques",
+        "Base de preuves à consolider avec captures et logs",
+        "Méthode réutilisable sur VM de labo"
       ],
-      tech: ["Linux", "Hardening", "Audit", "Réseaux"],
+      tech: ["Linux", "Hardening", "Audit", "Sécurité"],
       details: "projects/hardening-linux.html",
       code: "",
       codeStatus: "Code sur demande"
     },
     {
-      title: "Inclunum — Chatbot IA & Accessibilité",
-      summary: "Plateforme web d'inclusion numérique avec chatbot IA et focus accessibilité.",
-      objective: "Rendre l'accès aux services numériques plus simple et inclusif.",
+      title: "Inclunum — Plateforme web et accessibilité",
+      summary: "Projet web fullstack conçu pour rendre l'accès aux services numériques plus simple et plus accessible.",
+      objective: "Construire une application utile, compréhensible et techniquement propre côté front comme côté back.",
       actions: [
-        "Intégration API Hugging Face",
-        "Interface accessible (contrastes, navigation clavier)",
-        "Déploiement et documentation d'usage"
+        "Node.js, Express, MongoDB et logique serveur",
+        "Travail sur accessibilité, contrastes et navigation",
+        "Déploiement cloud et documentation d'usage"
       ],
       results: [
         "Prototype fonctionnel",
-        "Documentation utilisateur + technique",
-        "Tests d'accessibilité réalisés"
+        "Documentation utilisateur et technique",
+        "Base solide pour démontrer un profil plus large que l'infrastructure"
       ],
-      tech: ["Web", "API", "IA", "AWS"],
+      tech: ["Développement web", "API", "AWS", "Accessibilité"],
       details: "projects/inclunum.html",
-      code: "https://github.com/Ayoub-regd/"
-    },
-    {
-      title: "Portfolio — Archive de déploiement AWS S3",
-      summary: "Archive technique d'un ancien déploiement statique sur S3 dans un contexte d'apprentissage AWS.",
-      objective: "Documenter un déploiement historique sur S3, distinct de l'hébergement public actuel.",
-      actions: [
-        "Configuration S3 Static Website",
-        "Policy d'accès public + nettoyage sécurité",
-        "Automatisation du déploiement via script"
-      ],
-      results: [
-        "Configuration reproductible (JSON/policy)",
-        "Script de déploiement archivé localement",
-        "Cas d'étude AWS conservé comme preuve de pratique"
-      ],
-      tech: ["AWS", "S3", "Static Website"],
-      details: "projects/aws-s3-portfolio.html",
       code: "",
       codeStatus: "Code sur demande"
     },
     {
-      title: "Lab virtualisation — Proxmox/VMware",
-      summary: "Environnement de test virtualisé pour simuler une infra complète.",
-      objective: "Tester des services en toute sécurité (réseau, snapshots).",
+      title: "Portfolio — Archive de déploiement AWS S3",
+      summary: "Archive technique d'un ancien déploiement statique sur S3, conservée comme preuve de pratique cloud.",
+      objective: "Montrer une mise en place réelle sur AWS sans laisser croire que le site public repose encore dessus.",
       actions: [
-        "Création de VMs et templates",
-        "Segmentation réseau et VLAN",
-        "Snapshots et restauration rapide"
+        "Configuration S3 Static Website",
+        "Gestion de policy publique et nettoyage sécurité",
+        "Script de déploiement et fichiers de configuration archivés"
       ],
       results: [
-        "Infra de test prête à l'emploi",
-        "Procédures documentées",
-        "Services auto-hébergés isolés"
+        "Cas d'étude clair et réutilisable",
+        "Historique de déploiement documenté",
+        "Archive distincte du site public actuel"
       ],
-      tech: ["Proxmox", "VMware", "Infrastructure"],
+      tech: ["AWS", "S3", "Cloud", "Automatisation"],
+      details: "projects/aws-s3-portfolio.html",
+      code: "",
+      codeStatus: "Archive locale"
+    },
+    {
+      title: "Lab virtualisation — Proxmox / VMware",
+      summary: "Environnement de test pour simuler une infrastructure complète, isoler les services et rejouer des scénarios.",
+      objective: "Valider des montages d'infrastructure sans dépendre d'un environnement de production.",
+      actions: [
+        "Création de VMs, templates et snapshots",
+        "Segmentation réseau et organisation du lab",
+        "Documentation des procédures de restauration"
+      ],
+      results: [
+        "Environnement de test réutilisable",
+        "Support pour labs systèmes, réseau et sécurité",
+        "Base concrète pour les projets techniques du portfolio"
+      ],
+      tech: ["Proxmox", "VMware", "Infrastructure", "Virtualisation"],
       details: "projects/proxmox-lab.html",
       code: "",
       codeStatus: "Code sur demande"
     }
   ]
+};
+
+const REFERENCE_ALIASES = {
+  "developpement web": "web",
+  "web": "web",
+  "api": "web",
+  "accessibilite": "web",
+  "infrastructure": "infrastructure",
+  "cloud aws": "aws",
+  "aws": "aws",
+  "cloud": "aws",
+  "linux": "security",
+  "hardening": "security",
+  "audit": "security",
+  "securite": "security",
+  "reseaux": "infrastructure",
+  "virtualisation": "virtualisation",
+  "proxmox": "virtualisation",
+  "vmware": "virtualisation",
+  "automatisation": "automation"
 };
 
 function byId(id){ return document.getElementById(id); }
@@ -198,6 +327,49 @@ async function copyToClipboard(text){
   copyFallback(text);
 }
 
+function slugify(value){
+  return (value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function getReferenceHref(label){
+  const key = slugify(label);
+  const match = REFERENCE_ALIASES[key];
+  return match ? `#ref-${match}` : "";
+}
+
+function createToken(label, className){
+  const href = getReferenceHref(label);
+  if (href){
+    const a = document.createElement("a");
+    a.className = className;
+    a.href = href;
+    a.textContent = label;
+    return a;
+  }
+  const span = document.createElement("span");
+  span.className = className;
+  span.textContent = label;
+  return span;
+}
+
+function renderQualities(){
+  ["qualities", "qualitiesAside"].forEach(id => {
+    const container = byId(id);
+    if (!container) return;
+    container.innerHTML = "";
+    DATA.qualities.forEach(item => {
+      const span = document.createElement("span");
+      span.className = "quality-chip";
+      span.textContent = item;
+      container.appendChild(span);
+    });
+  });
+}
+
 function renderLinks(){
   const links = byId("links");
   if (!links) return;
@@ -230,10 +402,7 @@ function renderChips(){
   if (!chips) return;
   chips.innerHTML = "";
   DATA.chips.forEach(c => {
-    const span = document.createElement("span");
-    span.className = "chip";
-    span.textContent = c;
-    chips.appendChild(span);
+    chips.appendChild(createToken(c, "chip"));
   });
 }
 
@@ -282,7 +451,7 @@ function renderCertifications(){
 
     const status = document.createElement("p");
     status.className = "muted small";
-    status.textContent = `Statut: ${cert.status}`;
+    status.textContent = `Statut : ${cert.status}`;
 
     const details = document.createElement("p");
     details.className = "muted";
@@ -295,12 +464,58 @@ function renderCertifications(){
   });
 }
 
+function renderReferences(){
+  const container = byId("referencesList");
+  if (!container) return;
+  container.innerHTML = "";
+
+  DATA.references.forEach(ref => {
+    const card = document.createElement("article");
+    card.className = "reference-card";
+    card.id = `ref-${ref.id}`;
+
+    const title = document.createElement("h3");
+    title.textContent = ref.title;
+
+    const definition = document.createElement("p");
+    definition.textContent = ref.definition;
+
+    const usageLabel = document.createElement("div");
+    usageLabel.className = "step-label";
+    usageLabel.textContent = "Déjà utilisé dans";
+
+    card.appendChild(title);
+    card.appendChild(definition);
+    card.appendChild(usageLabel);
+    card.appendChild(createList(ref.usage || [], "reference-list"));
+
+    if (ref.links && ref.links.length){
+      const links = document.createElement("div");
+      links.className = "reference-links actions";
+      ref.links.forEach(link => {
+        if (!isValidUrl(link.url)) return;
+        const a = document.createElement("a");
+        a.className = "link-pill";
+        a.href = link.url;
+        a.textContent = link.label;
+        links.appendChild(a);
+      });
+      if (links.children.length){
+        card.appendChild(links);
+      }
+    }
+
+    container.appendChild(card);
+  });
+}
+
 function renderProjects(){
   const projects = byId("projects");
   if (!projects) return;
   projects.innerHTML = "";
+
   DATA.projects.forEach(p => {
-    const card = document.createElement("div");
+    const card = document.createElement("article");
     card.className = "card project";
 
     const head = document.createElement("div");
@@ -348,10 +563,7 @@ function renderProjects(){
     const badges = document.createElement("div");
     badges.className = "badges";
     (p.tech || []).forEach(t => {
-      const span = document.createElement("span");
-      span.className = "badge";
-      span.textContent = t;
-      badges.appendChild(span);
+      badges.appendChild(createToken(t, "badge"));
     });
 
     const actions = document.createElement("div");
@@ -361,8 +573,6 @@ function renderProjects(){
       const details = document.createElement("a");
       details.className = "link-pill";
       details.href = p.details;
-      details.target = "_blank";
-      details.rel = "noopener";
       details.textContent = "Détails";
       actions.appendChild(details);
     }
@@ -394,28 +604,21 @@ function renderProjects(){
 }
 
 function init(){
-  // Header / Hero / About
   setText("nameHeader", DATA.name);
   setText("roleHeader", DATA.role);
-
   setText("headlineHero", DATA.headline);
   setText("bioHero", DATA.bio);
-
   setText("nameAbout", DATA.name);
   setText("roleAbout", DATA.role);
   setText("headlineAbout", DATA.headline);
-
-  // Avatar
   setText("avatar", DATA.initials);
 
-  // Infos
   setText("locationInfo", DATA.location);
   setText("availabilityInfo", DATA.availability);
   setMail("mailLinkInfo", DATA.email);
   setMail("mailLinkFooter", DATA.email);
   setMailHref("mailBtn", DATA.email);
 
-  // CV
   const cvBtn = byId("btnCV");
   const cvNotice = byId("cvNotice");
   if (cvBtn){
@@ -440,19 +643,18 @@ function init(){
     }
   }
 
-  // Footer
   setText("year", new Date().getFullYear());
   setText("footerName", DATA.name);
 
-  // Sections
+  renderQualities();
   renderChips();
   renderLinks();
   renderSkills();
   renderExperience();
   renderCertifications();
+  renderReferences();
   renderProjects();
 
-  // Copy email
   const copyBtn = byId("copyEmailBtn");
   const copyStatus = byId("copyEmailStatus");
   if (copyBtn){
@@ -460,7 +662,7 @@ function init(){
       try{
         await copyToClipboard(DATA.email);
         if (copyStatus) copyStatus.textContent = "Email copié";
-      } catch (e){
+      } catch {
         if (copyStatus) copyStatus.textContent = "Copie impossible";
       }
       if (copyStatus){

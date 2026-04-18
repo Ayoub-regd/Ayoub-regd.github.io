@@ -1,33 +1,46 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ayoub REGGAD — SysAdmin / Cloud / Sécurité</title>
-  <meta name="description" content="Admin Systèmes/Réseaux & Cloud. Linux, AWS, hardening, audit. Stage mai 2026 (4 mois min) puis alternance oct. 2026." />
+  <title>Ayoub REGGAD — Développement & Infrastructure</title>
+  <meta name="description" content="Étudiant IPSSI en développement et infrastructure. Projets web, cloud, sécurité, virtualisation et automatisation. Recherche un stage dès mai 2026 puis une alternance dès octobre 2026." />
   <link rel="canonical" href="https://ayoub-regd.github.io/" />
   <meta name="author" content="Ayoub REGGAD" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b7285" />
-  <meta property="og:title" content="Ayoub REGGAD — SysAdmin / Cloud / Sécurité" />
-  <meta property="og:description" content="Linux, AWS, hardening, audit. Stage mai 2026 (4 mois min) puis alternance oct. 2026." />
+  <meta property="og:title" content="Ayoub REGGAD — Développement & Infrastructure" />
+  <meta property="og:description" content="Étudiant IPSSI. Projets web, infrastructure, cloud, sécurité et virtualisation. Stage mai 2026 puis alternance octobre 2026." />
   <meta property="og:url" content="https://ayoub-regd.github.io/" />
   <meta property="og:image" content="https://ayoub-regd.github.io/assets/og-image.png" />
   <meta property="og:image:alt" content="Ayoub REGGAD — Portfolio" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ayoub REGGAD — SysAdmin / Cloud / Sécurité" />
-  <meta name="twitter:description" content="Linux, AWS, hardening, audit. Stage mai 2026 (4 mois min) puis alternance oct. 2026." />
+  <meta name="twitter:title" content="Ayoub REGGAD — Développement & Infrastructure" />
+  <meta name="twitter:description" content="Projets web, infrastructure, cloud, sécurité et virtualisation. Stage mai 2026 puis alternance octobre 2026." />
   <meta name="twitter:image" content="https://ayoub-regd.github.io/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Ayoub REGGAD — Portfolio" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayoub REGGAD",
+    "url": "https://ayoub-regd.github.io/",
+    "email": "mailto:a.reggad@ecole-ipssi.net",
+    "jobTitle": "Etudiant en developpement et infrastructure",
+    "sameAs": [
+      "https://github.com/Ayoub-regd/",
+      "https://www.linkedin.com/in/ayoub-reggad-309078350/"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b7285'/%3E%3Ctext x='50' y='62' font-size='48' text-anchor='middle' fill='white' font-family='Space Grotesk, Arial'%3EAR%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
   <div class="container">
@@ -40,11 +53,12 @@
         </div>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation principale">
         <a href="#apropos">À propos</a>
         <a href="#experience">Parcours</a>
         <a href="#certifications">Certifications</a>
         <a href="#competences">Compétences</a>
+        <a href="#reperes">Repères</a>
         <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -55,6 +69,7 @@
         <div class="card">
           <h1 id="headlineHero" class="headline"></h1>
           <p id="bioHero" class="lead"></p>
+          <div id="qualities" class="qualities" aria-label="Qualités clés"></div>
 
           <div class="cta">
             <a id="btnCV" class="btn btn-disabled" aria-disabled="true">CV en mise à jour</a>
@@ -64,11 +79,11 @@
             Le CV public sera remis en ligne après réexport depuis la plateforme école avec la nouvelle URL GitHub Pages.
           </p>
 
-          <div id="chips" class="chips" aria-label="Mots-clés"></div>
+          <div id="chips" class="chips" aria-label="Domaines"></div>
         </div>
 
         <aside class="card">
-          <h2 class="card-title">Infos</h2>
+          <h2 class="card-title">Profil rapide</h2>
           <ul class="list">
             <li><span class="k">Localisation</span><span id="locationInfo"></span></li>
             <li><span class="k">Disponibilité</span><span id="availabilityInfo"></span></li>
@@ -78,14 +93,22 @@
             </li>
           </ul>
 
-          <div class="links" id="links"></div>
+          <div class="info-block">
+            <div class="mini-title">Qualités</div>
+            <div id="qualitiesAside" class="qualities qualities-compact" aria-label="Qualités"></div>
+          </div>
+
+          <div class="info-block">
+            <div class="mini-title">Liens</div>
+            <div class="links" id="links"></div>
+          </div>
         </aside>
       </section>
 
       <section id="apropos" class="section">
         <div class="section-title">
           <h2>À propos</h2>
-          <p class="muted">Profil, objectifs et approche technique.</p>
+          <p class="muted">Positionnement, objectifs et manière de travailler.</p>
         </div>
 
         <div class="card">
@@ -99,7 +122,7 @@
       <section id="experience" class="section">
         <div class="section-title">
           <h2>Parcours</h2>
-          <p class="muted">Formation, projets encadrés, expérience.</p>
+          <p class="muted">Formation, expérience et projets encadrés.</p>
         </div>
         <div class="card">
           <div id="experienceList" class="timeline"></div>
@@ -117,11 +140,19 @@
       <section id="competences" class="section">
         <div class="section-title">
           <h2>Compétences</h2>
-          <p class="muted">Stack et savoir-faire opérationnel.</p>
+          <p class="muted">Développement, infrastructure, cloud, sécurité et outils.</p>
         </div>
         <div class="card">
           <div id="skills" class="skills"></div>
         </div>
+      </section>
+
+      <section id="reperes" class="section">
+        <div class="section-title">
+          <h2>Repères techniques</h2>
+          <p class="muted">Définitions courtes, contexte d'usage et liens vers des preuves.</p>
+        </div>
+        <div id="referencesList" class="grid"></div>
       </section>
 
       <section id="projets" class="section">
@@ -129,13 +160,18 @@
           <h2>Projets</h2>
           <p class="muted">Sélection de projets, avec techno et liens.</p>
         </div>
+        <p class="section-note muted">
+          Une partie du code public et les versions du portfolio sont visibles sur
+          <a href="https://github.com/Ayoub-regd/" target="_blank" rel="noopener">GitHub</a>.
+          Certains dépôts de labo restent volontairement non publics lorsqu'ils contiennent des éléments de cours, d'infrastructure ou de configuration interne.
+        </p>
         <div id="projects" class="grid"></div>
       </section>
 
       <section id="contact" class="section">
         <div class="section-title">
           <h2>Contact</h2>
-          <p class="muted">Stage, alternance, ou échange technique.</p>
+          <p class="muted">Stage, alternance ou échange technique.</p>
         </div>
         <div class="card">
           <p class="muted" style="margin:0 0 12px;">
