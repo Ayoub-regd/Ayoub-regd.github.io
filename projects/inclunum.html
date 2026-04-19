@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inclunum — Détails | Ayoub REGGAD</title>
-  <meta name="description" content="Détails du projet Inclunum : objectif, actions, livrables et preuves à documenter." />
+  <meta name="description" content="Projet de groupe orienté inclusion numérique : frontend, backend Node.js, accessibilité et logique applicative." />
   <link rel="canonical" href="https://ayoub-regd.github.io/projects/inclunum.html" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b7285" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20260419-3" />
+  <link rel="stylesheet" href="../styles.css?v=20260419-4" />
 </head>
 <body class="project-page">
   <div class="container">
@@ -20,10 +20,10 @@
         <div class="avatar" aria-label="Avatar">AR</div>
         <div class="brand-text">
           <div class="brand-name">Inclunum</div>
-          <div class="muted small">Chatbot IA & accessibilité</div>
+          <div class="muted small">Projet de groupe — inclusion numérique</div>
         </div>
       </div>
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation du projet">
         <a href="../index.html">Retour au portfolio</a>
       </nav>
     </header>
@@ -32,60 +32,65 @@
       <section class="section">
         <div class="section-title">
           <h2>Contexte</h2>
-          <p class="muted">Inclusion numérique et accessibilité.</p>
+          <p class="muted">Projet de groupe et périmètre fonctionnel.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">
-            Plateforme web d'inclusion numérique avec chatbot IA, conçue pour faciliter l'accès aux services numériques.
-          </p>
+          <p class="muted" style="margin:0;">Inclunum est un projet de groupe de 1re année centré sur l'inclusion numérique. L'idée est de proposer des contenus, des parcours et des outils d'aide pour rendre certaines démarches plus lisibles et plus accessibles.</p>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Objectif</h2>
-          <p class="muted">Ce que le projet doit apporter.</p>
-        </div>
-        <div class="card">
-          <p class="muted" style="margin:0;">Rendre l'accès aux services numériques plus simple et inclusif.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-title">
-          <h2>Actions techniques</h2>
-          <p class="muted">Implémentations principales.</p>
+          <h2>Architecture observée</h2>
+          <p class="muted">Éléments techniques vérifiés dans les sources locales.</p>
         </div>
         <div class="card">
           <ul class="step-list">
-            <li>Intégration API Hugging Face.</li>
-            <li>Interface accessible (contrastes, navigation clavier).</li>
-            <li>Déploiement et documentation d'usage.</li>
+            <li>Frontend en HTML, CSS et JavaScript avec pages de contenus, quiz et formulaires.</li>
+            <li>Backend Node.js / Express avec MongoDB, validation et sécurité de base.</li>
+            <li>Découpage fonctionnel autour des utilisateurs, témoignages, FAQ, partenaires et quiz.</li>
           </ul>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Preuves</h2>
-          <p class="muted">Éléments vérifiables à joindre.</p>
+          <h2>Fonctions mises en place</h2>
+          <p class="muted">Ce qui ressort concrètement du projet.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">Aucune preuve jointe pour l’instant. À compléter avec démo, captures, tests d’accessibilité.</p>
+          <ul class="step-list">
+            <li>Scripts d'accessibilité pour ajuster la taille du texte, activer un contraste renforcé et lancer une lecture vocale.</li>
+            <li>Module d'assistant conversationnel côté interface.</li>
+            <li>Backend avec Express, Helmet, express-validator, MongoDB et journalisation.</li>
+          </ul>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Statut</h2>
-          <p class="muted">État actuel.</p>
+          <h2>Preuves techniques</h2>
+          <p class="muted">Indices concrets issus des fichiers de travail.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">Projet en cours de documentation.</p>
+          <ul class="step-list">
+            <li>Le package backend référence notamment helmet, express-validator, mongodb et winston.</li>
+            <li>Le serveur Express local gère des routes users, témoignages, FAQ, partenaires et quiz.</li>
+            <li>Des scripts dédiés existent pour l'accessibilité et pour l'assistant de navigation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Résultat</h2>
+          <p class="muted">Ce que ce projet prouve dans le portfolio.</p>
+        </div>
+        <div class="card">
+          <p class="muted" style="margin:0;">Inclunum montre une base fullstack de groupe, orientée utilité concrète et accessibilité. Le dépôt complet n'est pas publié ici, mais le périmètre technique et les briques principales sont vérifiables dans les sources locales du projet.</p>
         </div>
       </section>
     </main>
   </div>
 </body>
 </html>
-

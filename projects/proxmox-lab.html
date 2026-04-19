@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lab Proxmox / VMware — Détails | Ayoub REGGAD</title>
-  <meta name="description" content="Détails du lab de virtualisation Proxmox/VMware : objectifs, actions et livrables." />
+  <title>Lab Proxmox / pfSense / Ubuntu — Détails | Ayoub REGGAD</title>
+  <meta name="description" content="Lab de virtualisation Proxmox : VMs Ubuntu, segmentation réseau, SSH, Apache et procédures de test." />
   <link rel="canonical" href="https://ayoub-regd.github.io/projects/proxmox-lab.html" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b7285" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=20260419-3" />
+  <link rel="stylesheet" href="../styles.css?v=20260419-4" />
 </head>
 <body class="project-page">
   <div class="container">
@@ -19,11 +19,11 @@
       <div class="brand">
         <div class="avatar" aria-label="Avatar">AR</div>
         <div class="brand-text">
-          <div class="brand-name">Lab Proxmox / VMware</div>
+          <div class="brand-name">Lab Proxmox / pfSense / Ubuntu</div>
           <div class="muted small">Virtualisation et segmentation</div>
         </div>
       </div>
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation du projet">
         <a href="../index.html">Retour au portfolio</a>
       </nav>
     </header>
@@ -31,49 +31,54 @@
     <main>
       <section class="section">
         <div class="section-title">
-          <h2>Objectif</h2>
-          <p class="muted">Tester des services en environnement isolé.</p>
+          <h2>Contexte</h2>
+          <p class="muted">Cadre du TP et environnement utilisé.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">Créer un environnement de test virtualisé pour simuler une infrastructure complète.</p>
+          <p class="muted" style="margin:0;">Travail réalisé sur un nœud Proxmox de TP avec un pfSense géré au niveau de la classe et deux VMs Ubuntu Server dédiées : Ubuntu-Web et Ubuntu-SMB. L'objectif est de construire un environnement de test réutilisable, distinct d'un environnement de production.</p>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Actions techniques</h2>
-          <p class="muted">Configuration du lab.</p>
+          <h2>Travaux réalisés</h2>
+          <p class="muted">Actions effectivement documentées dans les notes de TP.</p>
         </div>
         <div class="card">
           <ul class="step-list">
-            <li>Création de VMs et templates.</li>
-            <li>Segmentation réseau et VLAN.</li>
-            <li>Snapshots et restauration rapide.</li>
+            <li>Création et installation de deux VMs Ubuntu Server 24.04.3 LTS.</li>
+            <li>Configuration SSH sur les VMs et sur le poste Windows de travail.</li>
+            <li>Installation d'Apache sur Ubuntu-Web et transferts de fichiers via scp et mini serveur Python.</li>
+            <li>Bascule réseau des VMs depuis vmbr0 vers vmbr1 pour isoler le LAN interne.</li>
           </ul>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Preuves</h2>
-          <p class="muted">Éléments vérifiables à joindre.</p>
+          <h2>Éléments vérifiés</h2>
+          <p class="muted">Constats concrets issus du lab.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">Aucune preuve jointe pour l’instant. À compléter avec schémas, captures et procédures.</p>
+          <ul class="step-list">
+            <li>SSH actif sur Ubuntu-Web et Ubuntu-SMB, avec mise en place de clés côté poste Windows.</li>
+            <li>Apache fonctionnel sur Ubuntu-Web.</li>
+            <li>Différenciation claire entre bridge principal et bridge interne pour préparer la segmentation réseau.</li>
+            <li>Utilisation de scp pour pousser les fichiers de travail entre le poste, Proxmox et les VMs.</li>
+          </ul>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Statut</h2>
-          <p class="muted">État actuel.</p>
+          <h2>Résultat</h2>
+          <p class="muted">Ce que ce lab prouve réellement.</p>
         </div>
         <div class="card">
-          <p class="muted" style="margin:0;">Projet en cours de documentation.</p>
+          <p class="muted" style="margin:0;">Ce lab montre une capacité à monter un environnement virtualisé de test, à y déployer des services Linux, à organiser les flux réseau et à documenter une procédure reproductible. Les adresses internes et détails d'exploitation ne sont pas publiés sur le site public.</p>
         </div>
       </section>
     </main>
   </div>
 </body>
 </html>
-

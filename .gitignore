@@ -4,3 +4,4 @@ Desktop.ini
 .server*.log
 .*.png
 .*.html
+.local-audit/
