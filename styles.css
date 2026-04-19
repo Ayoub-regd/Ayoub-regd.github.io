@@ -94,6 +94,7 @@ button:focus-visible{
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   z-index: 10;
+  min-width: 0;
 }
 
 .brand{
@@ -192,6 +193,10 @@ button:focus-visible{
   gap: 16px;
   margin-top: 18px;
   align-items:start;
+}
+
+.hero > *{
+  min-width: 0;
 }
 
 .section{
@@ -544,29 +549,37 @@ button:focus-visible{
 @media (max-width: 1080px){
   .header{
     position: relative;
-    display:block;
+    display:grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items:start;
+    gap: 12px;
     padding-right: 14px;
   }
 
   .brand{
+    grid-column: 1;
     flex: none;
     min-height: 48px;
+    max-width: 100%;
+    padding-right: 4px;
   }
 
   .js .nav-toggle{
     display:inline-flex;
-    position:fixed;
-    top: 18px;
-    right: 18px;
-    z-index: 30;
+    position:static;
+    grid-column: 2;
+    justify-self:end;
+    align-self:start;
+    z-index: 2;
     background: var(--accent);
     color: #fff;
     border-color: transparent;
   }
 
   .js .nav{
+    grid-column: 1 / -1;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 8px;
   }
 
   .js .header.is-nav-open .nav{
@@ -618,7 +631,12 @@ button:focus-visible{
   }
 
   .brand-text{
-    padding-right: 8px;
+    padding-right: 4px;
+  }
+
+  .brand-text .small{
+    font-size: 0.82rem;
+    line-height: 1.25;
   }
 
   .nav-toggle{
