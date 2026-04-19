@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>REVIEWEO — Détails | Ayoub REGGAD</title>
+  <meta name="description" content="Projet web d'équipe REVIEWEO : architecture mini MVC en PHP, rôles, sessions, MySQL et likes AJAX." />
+  <link rel="canonical" href="https://ayoub-regd.github.io/projects/revieweo.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b7285" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20260419-5" />
+</head>
+<body class="project-page">
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="avatar" aria-label="Avatar">AR</div>
+        <div class="brand-text">
+          <div class="brand-name">REVIEWEO</div>
+          <div class="muted small">Projet web d'équipe — PHP / MySQL / Bootstrap</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navigation du projet">
+        <a href="../index.html">Retour au portfolio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-title">
+          <h2>Contexte</h2>
+          <p class="muted">Cadre du projet et périmètre demandé.</p>
+        </div>
+        <div class="card">
+          <p class="muted" style="margin:0;">REVIEWEO est un projet web IPSSI réalisé en groupe dans le cadre d'un rendu de fin d'UE. Le sujet imposait une application de critiques avec trois rôles distincts, un frontend, un backend, une base de données et une soutenance individuelle.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Architecture vérifiée</h2>
+          <p class="muted">Éléments confirmés dans les fichiers du projet.</p>
+        </div>
+        <div class="card">
+          <ul class="step-list">
+            <li>Application en PHP 8.2, MySQL / MariaDB, Bootstrap 5 et JavaScript.</li>
+            <li>Architecture mini MVC avec point d'entrée unique <code>public/index.php</code>.</li>
+            <li>Composants séparés entre <code>Core</code>, <code>Controllers</code>, <code>Repositories</code>, <code>Services</code>, <code>Views</code> et <code>database</code>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Mon apport</h2>
+          <p class="muted">Ce qui m'est attribué dans la documentation du groupe.</p>
+        </div>
+        <div class="card">
+          <ul class="step-list">
+            <li>Cadrage, socle technique, sécurité, documentation, preuves et préparation du rendu.</li>
+            <li>Structuration du backend, contrôle d'accès par rôles et cohérence de l'architecture.</li>
+            <li>Préparation d'un projet suffisamment clair pour être défendu à l'oral individuellement.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Preuves techniques</h2>
+          <p class="muted">Faits observables dans le code et la documentation.</p>
+        </div>
+        <div class="card">
+          <ul class="step-list">
+            <li><code>Auth.php</code> vérifie la session, le rôle et protège les zones privées.</li>
+            <li><code>public/index.php</code> active les sessions avec cookies <code>HttpOnly</code>, <code>SameSite=Lax</code> et <code>use_strict_mode</code>.</li>
+            <li><code>LikeController.php</code> retourne du JSON et <code>public/assets/js/like.js</code> déclenche un <code>fetch()</code> AJAX sans rechargement.</li>
+            <li><code>database/schema.sql</code> définit les tables <code>users</code>, <code>reviews</code>, <code>categories</code>, <code>review_category</code> et <code>likes</code>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Publication</h2>
+          <p class="muted">Ce qui est public et ce qui ne l'est pas.</p>
+        </div>
+        <div class="card">
+          <p class="muted" style="margin:0 0 12px;">Le dépôt GitHub du projet est public. Les comptes de démonstration et les mots de passe de seed ne sont pas reproduits sur cette page pour ne pas republier inutilement des détails d'environnement.</p>
+          <a class="btn" href="https://github.com/Ayoub-regd/projet_revieweo" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Voir le dépôt GitHub</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

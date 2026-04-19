@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ayoub-regd.github.io/projects/revieweo.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ayoub-regd.github.io/projects/hardening-linux.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -52,7 +52,7 @@
         <div class="avatar" aria-label="Avatar">AR</div>
         <div class="brand-text">
           <div class="brand-name">Ayoub REGGAD</div>
-          <div class="muted small">Étudiant IPSSI — profil développement & infrastructure</div>
+          <div class="muted small">Étudiant IPSSI — développement, infrastructure, cloud & sécurité</div>
         </div>
       </div>
 
@@ -146,12 +146,12 @@
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-type">Formation</div>
-              <h3 class="timeline-title">IPSSI — Bachelor Administrateur Systèmes, Réseaux et Sécurité</h3>
+              <h3 class="timeline-title">IPSSI — Bachelor Administrateur Systèmes, Réseaux et Sécurité, avec pratique du développement</h3>
               <div class="timeline-meta">Depuis octobre 2024</div>
               <ul>
                 <li>Administration Linux et Windows Server.</li>
                 <li>Virtualisation, réseau, cloud AWS et sécurité.</li>
-                <li>TPs documentés en audit, scripting, API et infrastructure.</li>
+                <li>TPs documentés en audit, scripting, API, PHP, React et infrastructure.</li>
               </ul>
             </div>
 
@@ -163,6 +163,17 @@
                 <li>Optimisation WordPress et structure des contenus.</li>
                 <li>Crawls réguliers et reporting des correctifs.</li>
                 <li>Suivi opérationnel à distance.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-type">Projet web d'équipe</div>
+              <h3 class="timeline-title">REVIEWEO — PHP, MySQL, Bootstrap, rôles et likes AJAX</h3>
+              <div class="timeline-meta">Projet IPSSI — module web</div>
+              <ul>
+                <li>Architecture mini MVC avec front controller unique.</li>
+                <li>Authentification, sessions, rôles user / critique / admin.</li>
+                <li>Like AJAX, base MySQL relationnelle et documentation de rendu.</li>
               </ul>
             </div>
 
@@ -252,6 +263,7 @@
             <div class="step-label">Déjà utilisé dans</div>
             <ul class="reference-list">
               <li>Inclunum : frontend, backend et logique applicative.</li>
+              <li>Revieweo : mini MVC PHP, authentification et rôles.</li>
               <li>TP React / Vite / Router avec composants, routes et fetch.</li>
             </ul>
           </article>
@@ -334,6 +346,45 @@
         </div>
         <p class="section-note muted">Le code public de ce portfolio et certaines versions de travail sont visibles sur <a href="https://github.com/Ayoub-regd/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">GitHub</a>. Les supports de labo qui contiennent des éléments internes de cours, d'infrastructure ou de configuration restent volontairement non publics.</p>
         <div class="grid">
+          <article class="card project">
+            <div class="project-head">
+              <h3>REVIEWEO — Projet web d'équipe</h3>
+              <p>Plateforme de critiques de films en PHP avec rôles distincts, base MySQL et interactions dynamiques côté navigateur.</p>
+            </div>
+            <div class="project-steps">
+              <div class="step">
+                <div class="step-label">Objectif</div>
+                <p>Livrer une application web complète, défendable à l'oral, avec séparation claire entre interface, logique métier et contrôle d'accès.</p>
+              </div>
+              <div class="step">
+                <div class="step-label">Actions</div>
+                <ul class="step-list">
+                  <li>Socle mini MVC, front controller <code>public/index.php</code> et routage centralisé.</li>
+                  <li>Authentification, sessions, contrôle des rôles et protection des zones privées.</li>
+                  <li>Like AJAX, base MySQL relationnelle et documentation d'architecture.</li>
+                </ul>
+              </div>
+              <div class="step">
+                <div class="step-label">Preuves</div>
+                <ul class="step-list">
+                  <li>README, architecture écrite et soutenance individuelle documentée.</li>
+                  <li>Fichiers vérifiés : <code>Auth.php</code>, <code>Router.php</code>, <code>LikeController.php</code>, <code>like.js</code>, <code>schema.sql</code>.</li>
+                  <li>Dépôt GitHub public accessible et historique de travail d'équipe conservé.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="badges">
+              <a class="badge" href="#ref-development">PHP</a>
+              <a class="badge" href="#ref-development">Mini MVC</a>
+              <a class="badge" href="#ref-security">Sessions</a>
+              <a class="badge" href="#ref-api">AJAX</a>
+            </div>
+            <div class="actions">
+              <a class="link-pill" href="./projects/revieweo.html">Détails</a>
+              <a class="link-pill" href="https://github.com/Ayoub-regd/projet_revieweo" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Code GitHub</a>
+            </div>
+          </article>
+
           <article class="card project">
             <div class="project-head">
               <h3>Projet cybersécurité — Hardening Linux</h3>
