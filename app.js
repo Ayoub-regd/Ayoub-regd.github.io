@@ -2,7 +2,7 @@ const DATA = {
   name: "Ayoub REGGAD",
   initials: "AR",
   role: "Étudiant IPSSI — Développement & Infrastructure",
-  headline: "Je développe des projets web et je construis des environnements d'infrastructure, cloud et sécurité.",
+  headline: "Je développe des applications web et je construis des environnements techniques fiables, du code jusqu'à l'infrastructure.",
   bio: "Je recherche un stage dès mai 2026, puis une alternance à partir d'octobre 2026. Je suis ouvert à des missions concrètes en développement, infrastructure, cloud ou sécurité, avec une préférence pour les sujets utiles, documentés et techniquement propres.",
   location: "Nice, Alpes-Maritimes",
   availability: "Stage dès mai 2026 (4 mois min), alternance dès octobre 2026",
@@ -89,11 +89,6 @@ const DATA = {
       title: "Labs cybersécurité / hardening",
       status: "En cours",
       details: "Audits Linux, réduction de surface d'attaque, pare-feu et documentation de remédiation."
-    },
-    {
-      title: "Veille et événements cybersécurité",
-      status: "Actif",
-      details: "Participation à des échanges techniques et consolidation des notes de cours, de labo et de projet."
     }
   ],
 
@@ -191,7 +186,7 @@ const DATA = {
       tech: ["Linux", "Hardening", "Audit", "Sécurité"],
       details: "projects/hardening-linux.html",
       code: "",
-      codeStatus: "Code sur demande"
+      codeStatus: "Support de labo non publié"
     },
     {
       title: "Inclunum — Plateforme web et accessibilité",
@@ -210,7 +205,7 @@ const DATA = {
       tech: ["Développement web", "API", "AWS", "Accessibilité"],
       details: "projects/inclunum.html",
       code: "",
-      codeStatus: "Code sur demande"
+      codeStatus: "Dépôt non public"
     },
     {
       title: "Portfolio — Archive de déploiement AWS S3",
@@ -229,7 +224,7 @@ const DATA = {
       tech: ["AWS", "S3", "Cloud", "Automatisation"],
       details: "projects/aws-s3-portfolio.html",
       code: "",
-      codeStatus: "Archive locale"
+      codeStatus: "Fichiers d'archive non publiés"
     },
     {
       title: "Lab virtualisation — Proxmox / VMware",
@@ -248,7 +243,7 @@ const DATA = {
       tech: ["Proxmox", "VMware", "Infrastructure", "Virtualisation"],
       details: "projects/proxmox-lab.html",
       code: "",
-      codeStatus: "Code sur demande"
+      codeStatus: "Support de labo non publié"
     }
   ]
 };
@@ -357,7 +352,7 @@ function createToken(label, className){
 }
 
 function renderQualities(){
-  ["qualities", "qualitiesAside"].forEach(id => {
+  ["qualitiesAside"].forEach(id => {
     const container = byId(id);
     if (!container) return;
     container.innerHTML = "";
@@ -379,7 +374,8 @@ function renderLinks(){
     a.className = "link-pill";
     a.href = l.url;
     a.target = "_blank";
-    a.rel = "noopener";
+    a.rel = "noopener noreferrer";
+    a.referrerPolicy = "no-referrer";
     a.textContent = l.label;
     links.appendChild(a);
   });
@@ -497,6 +493,11 @@ function renderReferences(){
         const a = document.createElement("a");
         a.className = "link-pill";
         a.href = link.url;
+        if (/^https?:\/\//.test(link.url)){
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.referrerPolicy = "no-referrer";
+        }
         a.textContent = link.label;
         links.appendChild(a);
       });
@@ -582,7 +583,8 @@ function renderProjects(){
       code.className = "link-pill";
       code.href = p.code;
       code.target = "_blank";
-      code.rel = "noopener";
+      code.rel = "noopener noreferrer";
+      code.referrerPolicy = "no-referrer";
       code.textContent = "Code";
       actions.appendChild(code);
     } else if (p.codeStatus){
@@ -625,7 +627,8 @@ function init(){
     if (isValidUrl(DATA.cvUrl)){
       cvBtn.href = DATA.cvUrl;
       cvBtn.target = "_blank";
-      cvBtn.rel = "noopener";
+      cvBtn.rel = "noopener noreferrer";
+      cvBtn.referrerPolicy = "no-referrer";
       cvBtn.textContent = "Télécharger le CV";
       cvBtn.classList.remove("btn-disabled");
       cvBtn.removeAttribute("aria-disabled");
@@ -669,6 +672,62 @@ function init(){
         setTimeout(() => { copyStatus.textContent = ""; }, 2000);
       }
     });
+  }
+
+  const navToggle = byId("navToggle");
+  const nav = byId("siteNav");
+  const header = document.querySelector(".header");
+  if (navToggle && nav && header){
+    const closeNav = () => {
+      header.classList.remove("is-nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Ouvrir le menu");
+      const label = navToggle.querySelector(".nav-toggle-label");
+      const icon = navToggle.querySelector(".nav-toggle-icon");
+      if (label) label.textContent = "Menu";
+      if (icon) icon.textContent = "☰";
+    };
+
+    const openNav = () => {
+      header.classList.add("is-nav-open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navToggle.setAttribute("aria-label", "Fermer le menu");
+      const label = navToggle.querySelector(".nav-toggle-label");
+      const icon = navToggle.querySelector(".nav-toggle-icon");
+      if (label) label.textContent = "Fermer";
+      if (icon) icon.textContent = "×";
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = header.classList.contains("is-nav-open");
+      if (isOpen){
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 1080){
+          closeNav();
+        }
+      });
+    });
+
+    window.addEventListener("keydown", event => {
+      if (event.key === "Escape"){
+        closeNav();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1080){
+        closeNav();
+      }
+    });
+
+    closeNav();
   }
 }
 

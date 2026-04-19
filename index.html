@@ -9,6 +9,7 @@
   <meta name="author" content="Ayoub REGGAD" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0b7285" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta property="og:title" content="Ayoub REGGAD — Développement & Infrastructure" />
   <meta property="og:description" content="Étudiant IPSSI. Projets web, infrastructure, cloud, sécurité et virtualisation. Stage mai 2026 puis alternance octobre 2026." />
   <meta property="og:url" content="https://ayoub-regd.github.io/" />
@@ -21,6 +22,7 @@
   <meta name="twitter:description" content="Projets web, infrastructure, cloud, sécurité et virtualisation. Stage mai 2026 puis alternance octobre 2026." />
   <meta name="twitter:image" content="https://ayoub-regd.github.io/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Ayoub REGGAD — Portfolio" />
+  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b7285'/%3E%3Ctext x='50' y='62' font-size='48' text-anchor='middle' fill='white' font-family='Space Grotesk, Arial'%3EAR%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="./styles.css?v=20260419-1" />
+  <link rel="stylesheet" href="./styles.css?v=20260419-3" />
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -53,7 +55,12 @@
         </div>
       </div>
 
-      <nav class="nav" aria-label="Navigation principale">
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav class="nav" id="siteNav" aria-label="Navigation principale">
         <a href="#apropos">À propos</a>
         <a href="#experience">Parcours</a>
         <a href="#certifications">Certifications</a>
@@ -69,14 +76,13 @@
         <div class="card">
           <h1 id="headlineHero" class="headline"></h1>
           <p id="bioHero" class="lead"></p>
-          <div id="qualities" class="qualities" aria-label="Qualités clés"></div>
 
           <div class="cta">
-            <a id="btnCV" class="btn btn-disabled" aria-disabled="true">CV en mise à jour</a>
+            <a id="btnCV" class="btn" href="./assets/REGGAD-Ayoub-cv.pdf" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
             <a class="btn btn-outline" href="#projets">Voir mes projets</a>
           </div>
-          <p id="cvNotice" class="small muted" style="margin:8px 0 0;">
-            Le CV public sera remis en ligne après réexport depuis la plateforme école avec la nouvelle URL GitHub Pages.
+          <p id="cvNotice" class="small muted" style="margin:8px 0 0;" hidden>
+            Le CV public sera remis en ligne après réexport depuis la plateforme école avec la nouvelle URL du portfolio.
           </p>
 
           <div id="chips" class="chips" aria-label="Domaines"></div>
@@ -132,7 +138,7 @@
       <section id="certifications" class="section">
         <div class="section-title">
           <h2>Certifications / En cours</h2>
-          <p class="muted">Certifs, labs et apprentissages actifs.</p>
+          <p class="muted">Certifications suivies et labs déjà pratiqués.</p>
         </div>
         <div id="certificationsList" class="grid grid-3"></div>
       </section>
@@ -162,7 +168,7 @@
         </div>
         <p class="section-note muted">
           Une partie du code public et les versions du portfolio sont visibles sur
-          <a href="https://github.com/Ayoub-regd/" target="_blank" rel="noopener">GitHub</a>.
+          <a href="https://github.com/Ayoub-regd/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">GitHub</a>.
           Certains dépôts de labo restent volontairement non publics lorsqu'ils contiennent des éléments de cours, d'infrastructure ou de configuration interne.
         </p>
         <div id="projects" class="grid"></div>
@@ -192,6 +198,6 @@
     <footer class="footer"></footer>
   </div>
 
-  <script src="./app.js?v=20260419-1" defer></script>
+  <script src="./app.js?v=20260419-3" defer></script>
 </body>
 </html>
